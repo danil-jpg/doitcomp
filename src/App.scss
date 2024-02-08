@@ -1,0 +1,34 @@
+body {
+    background-color: #0f1215;
+}
+
+$mainC: #fff;
+$secondaryC: #20252b;
+$tabteT: #67707a;
+
+button.Btn {
+    &_tab {
+        border: 2px solid $secondaryC;
+        // padding: 30px 44px;
+        font-family: Rubik;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 100%;
+        text-align: center;
+        color: $mainC;
+        background-color: transparent;
+        &:hover {
+            color: $secondaryC;
+            background-color: $mainC;
+        }
+    }
+}
+
+.row-text {
+    font-family: Rubik;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: $tabteT;
+    border: none !important;
+}

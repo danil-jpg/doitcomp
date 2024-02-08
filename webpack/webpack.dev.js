@@ -60,7 +60,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(tsx|jsx|js)$/,
+                test: /\.(tsx|jsx|js|ts)$/,
                 exclude: /node_modules/,
                 use: [
                     {
