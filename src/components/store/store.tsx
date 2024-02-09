@@ -5,13 +5,16 @@ import productsSlice from './slices/productsSlice';
 import { TypedUseSelectorHook } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
+import cardsSlice from './slices/cardsSlice';
+import usersSlice from './slices/usersSlice';
+import todoSlice from './slices/todoSlice';
 
 const persistConfig = {
     key: 'root',
     storage,
 };
 
-const rootReducer = combineReducers({ productsSlice });
+const rootReducer = combineReducers({ productsSlice, cardsSlice, usersSlice, todoSlice });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 

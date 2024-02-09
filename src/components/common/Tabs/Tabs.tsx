@@ -11,9 +11,10 @@ const Tabs: FC<ITabs> = ({ array }) => {
 
     return (
         <>
-            {array.map((el) => {
+            {array.map((el, index) => {
                 return (
                     <Button
+                        key={index}
                         sx={{
                             my: '25px',
                         }}

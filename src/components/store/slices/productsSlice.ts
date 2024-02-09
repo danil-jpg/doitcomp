@@ -32,7 +32,7 @@ const initialState: IProducts = {
 };
 
 export const getProducts = createAsyncThunk('getProducts', async () => {
-    const products = await fetch('https://dummyjson.com/products', { cache: 'no-store' }).then((res) => res.json());
+    const products = await fetch('https://dummyjson.com/products?limit=10', { cache: 'no-store' }).then((res) => res.json());
 
     return products;
 });
@@ -46,14 +46,14 @@ export const productsSlice = createSlice({
         },
     },
     extraReducers: (builder) => {
-        builder.addCase(getProducts.pending, (state: IProducts) => {
+        builder.addCase(getProducts.pending, (state) => {
             state.isLoading = true;
         });
-        builder.addCase(getProducts.fulfilled, (state: IProducts, action: PayloadAction<any>) => {
+        builder.addCase(getProducts.fulfilled, (state, action: PayloadAction<any>) => {
             state.isLoading = false;
             state.products = action.payload;
         });
-        builder.addCase(getProducts.rejected, (state: IProducts, action: PayloadAction<any>) => {
+        builder.addCase(getProducts.rejected, (state, action: PayloadAction<any>) => {
             // БЕз понятия как типизировать тут экшн
             state.isLoading = false;
             state.error = action.error.message;
@@ -62,4 +62,3 @@ export const productsSlice = createSlice({
 });
 
 export default productsSlice.reducer;
-export const { setProductsData } = productsSlice.actions;

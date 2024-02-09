@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../store/store';
 import DataTable from '../common/Tables/Table';
-import { getcarts } from '../store/slices/cardsSlice';
+import { getUsers } from '../store/slices/usersSlice';
 
-const Teams = () => {
-    const selector = useAppSelector((state) => state.cardsSlice.carts.carts);
+const Players = () => {
+    const selector = useAppSelector((state) => state.usersSlice.users.users);
+
     const dispath = useAppDispatch();
 
     useEffect(() => {
-        dispath(getcarts());
+        dispath(getUsers());
+        console.log(selector);
     }, []);
 
     if (!selector) {
@@ -17,4 +19,4 @@ const Teams = () => {
     return <DataTable dataArr={selector}></DataTable>;
 };
 
-export default Teams;
+export default Players;
