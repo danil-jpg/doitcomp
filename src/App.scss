@@ -4,7 +4,7 @@ body {
 
 $mainC: #fff;
 $secondaryC: #20252b;
-$tabteT: #67707a;
+$tabteC: #67707a;
 
 button.Btn {
     &_tab {
@@ -17,6 +17,7 @@ button.Btn {
         text-align: center;
         color: $mainC;
         background-color: transparent;
+
         &:hover {
             color: $secondaryC;
             background-color: $mainC;
@@ -29,6 +30,6 @@ button.Btn {
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
-    color: $tabteT;
+    color: $tabteC;
     border: none !important;
 }

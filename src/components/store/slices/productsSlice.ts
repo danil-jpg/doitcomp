@@ -1,5 +1,4 @@
 import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-
 interface IProducts {
     products: {
         limit: number;
@@ -31,8 +30,8 @@ const initialState: IProducts = {
     isLoading: false,
 };
 
-export const getProducts = createAsyncThunk('getProducts', async () => {
-    const products = await fetch('https://dummyjson.com/products?limit=10', { cache: 'no-store' }).then((res) => res.json());
+export const getProducts = createAsyncThunk<IProducts>('getProducts', async () => {
+    const products: IProducts = await fetch('https://dummyjson.com/products?limit=10', { cache: 'no-store' }).then((res) => res.json());
 
     return products;
 });
@@ -41,7 +40,7 @@ export const productsSlice = createSlice({
     name: 'productsSlice',
     initialState,
     reducers: {
-        setProductsData: (state: IProducts, action) => {
+        setProductsData: (state, action: PayloadAction<IProducts>) => {
             // state.products.products = action.payload;
         },
     },
@@ -49,11 +48,11 @@ export const productsSlice = createSlice({
         builder.addCase(getProducts.pending, (state) => {
             state.isLoading = true;
         });
-        builder.addCase(getProducts.fulfilled, (state, action: PayloadAction<any>) => {
+        builder.addCase(getProducts.fulfilled, (state, action: PayloadAction<IProducts>) => {
             state.isLoading = false;
-            state.products = action.payload;
+            state = action.payload;
         });
-        builder.addCase(getProducts.rejected, (state, action: PayloadAction<any>) => {
+        builder.addCase(getProducts.rejected, (state, action) => {
             // БЕз понятия как типизировать тут экшн
             state.isLoading = false;
             state.error = action.error.message;

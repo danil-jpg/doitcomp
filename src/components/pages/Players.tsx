@@ -10,7 +10,6 @@ const Players = () => {
 
     useEffect(() => {
         dispath(getUsers());
-        console.log(selector);
     }, []);
 
     if (!selector) {

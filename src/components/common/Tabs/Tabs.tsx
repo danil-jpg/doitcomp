@@ -1,9 +1,10 @@
 import { Button } from '@mui/material';
 import React, { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { IPagesName } from '../../../App';
 
 interface ITabs {
-    array: string[];
+    array: IPagesName[];
 }
 
 const Tabs: FC<ITabs> = ({ array }) => {

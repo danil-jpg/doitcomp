@@ -23,6 +23,8 @@ declare module '*.jpg?as=webp' {
 declare module '@mui/material/Button' {
     interface ButtonPropsVariantOverrides {
         tab: true;
+        tab2: true;
+        index: true;
     }
 }
 

@@ -1,0 +1,8 @@
+.dropdown {
+    &__content {
+        display: none;
+        &_active {
+            display: block;
+        }
+    }
+}
