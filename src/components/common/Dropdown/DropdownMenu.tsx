@@ -17,10 +17,13 @@ const DropdownMenu: FC<IDropdownMenu> = ({ text, children }) => {
                 border: '1px solid #20252b',
                 p: '30px',
                 color: 'primary.main',
+                my: '22px',
+                cursor: 'pointer',
+                maxWidth: '600px',
+                mx: 'auto',
             }}
-            className={`dropdown`}
-            onClick={() => setIsOpen(!isOpen)}>
-            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            className={`dropdown`}>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} onClick={() => setIsOpen(!isOpen)}>
                 <Typography variant='body1' className='dropdown__text'>
                     {text}
                 </Typography>
