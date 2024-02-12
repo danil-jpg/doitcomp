@@ -2,9 +2,10 @@ import React from 'react';
 import { Menu } from '@mui/base/Menu';
 import DropdownMenu from '../common/Dropdown/DropdownMenu';
 import DropdownBody from '../common/Dropdown/DropdownBody/DropdownBody';
-import { FormControl, InputLabel, MenuItem, Select as MuiSelect } from '@mui/material';
+import { FormControl, InputLabel, MenuItem } from '@mui/material';
 import Select from '../common/ui/Select/Select';
 import Input from '../common/ui/Input/Input';
+import TextField from '../common/ui/TextField/TextField';
 
 const Dropdowns = () => {
     return (
@@ -14,6 +15,8 @@ const Dropdowns = () => {
                     <FormControl fullWidth>
                         <Select label='Host' selectArr={['text1', 'text2', 'text3']} />
                         <Input label='Tournament name*' />
+                        <Input label='URL' />
+                        <TextField label='Quick Rules' />
                     </FormControl>
                 </DropdownBody>
             </DropdownMenu>
