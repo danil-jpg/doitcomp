@@ -4,6 +4,7 @@ import DropdownMenu from '../common/Dropdown/DropdownMenu';
 import DropdownBody from '../common/Dropdown/DropdownBody/DropdownBody';
 import { FormControl, InputLabel, MenuItem, Select as MuiSelect } from '@mui/material';
 import Select from '../common/ui/Select/Select';
+import Input from '../common/ui/Input/Input';
 
 const Dropdowns = () => {
     return (
@@ -12,6 +13,7 @@ const Dropdowns = () => {
                 <DropdownBody>
                     <FormControl fullWidth>
                         <Select label='Host' selectArr={['text1', 'text2', 'text3']} />
+                        <Input label='Tournament name*' />
                     </FormControl>
                 </DropdownBody>
             </DropdownMenu>
