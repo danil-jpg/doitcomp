@@ -3,15 +3,17 @@ import React, { FC } from 'react';
 
 interface ITextField {
     label: string;
+    placeholder: string;
 }
 
-const TextField: FC<ITextField> = ({ label }) => {
+const TextField: FC<ITextField> = ({ label, placeholder }) => {
     return (
         <>
             <Typography variant='body1' sx={{ fontSize: '16px', mb: '12px' }}>
                 {label}
             </Typography>
-            <MuiTextField multiline sx={{ border: '2px solid #20252B', color: 'primary.main' }} />
+            {/* Если добавить multiline,то приложение крашиться */}
+            <MuiTextField multiline placeholder={`${placeholder}`} sx={{ border: '2px solid #20252B', input: { color: 'primary.main' }, width: '100%' }} />
         </>
     );
 };
