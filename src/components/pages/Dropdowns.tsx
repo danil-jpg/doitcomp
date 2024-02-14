@@ -11,6 +11,8 @@ import DropdownBodyBasicInfo from '../common/Dropdown/DropdownBody/DropdownBodyB
 import DropdownBodyGameInfo from '../common/Dropdown/DropdownBody/DropdownBodyGameInfo/DropdownBodyGameInfo';
 import DropdownBodyRagistration from '../common/Dropdown/DropdownBody/DropdownBodyRagistration/DropdownBodyRagistration';
 import DropdownBodyIfPaid from '../common/Dropdown/DropdownBody/DropdownBodyIfPaid/DropdownBodyIfPaid';
+import DropdownPlayerList from '../common/Dropdown/DropdownBody/DropdownPlayerList/DropdownPlayerList';
+import DropdownBodyLeagues from '../common/Dropdown/DropdownBody/DropdownBodyLeagues/DropdownBodyLeagues';
 
 const Dropdowns = () => {
     return (
@@ -30,6 +32,12 @@ const Dropdowns = () => {
             </DropdownMenu>
             <DropdownMenu text='if Paid'>
                 <DropdownBodyIfPaid />
+            </DropdownMenu>
+            <DropdownMenu text='Player list'>
+                <DropdownPlayerList />
+            </DropdownMenu>
+            <DropdownMenu text='Leagues'>
+                <DropdownBodyLeagues />
             </DropdownMenu>
         </>
     );
