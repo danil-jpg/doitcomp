@@ -4,9 +4,10 @@ import { Box, Input as MuiInput, Typography } from '@mui/material';
 interface IInput {
     label: string;
     placeholder?: string;
+    sx?: {};
 }
 
-const Input: FC<IInput> = ({ label, placeholder }) => {
+const Input: FC<IInput> = ({ label, placeholder, sx }) => {
     return (
         <Box sx={{ my: '22px', width: '100%' }}>
             <Typography variant='body1' sx={{ fontSize: '16px', mb: '12px' }}>
@@ -20,6 +21,7 @@ const Input: FC<IInput> = ({ label, placeholder }) => {
                     fontSize: '16px',
                     borderRadius: '4px',
                     width: '100%',
+                    ...sx,
                 }}
                 placeholder={placeholder}></MuiInput>
         </Box>

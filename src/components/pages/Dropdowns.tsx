@@ -13,6 +13,7 @@ import DropdownBodyRagistration from '../common/Dropdown/DropdownBody/DropdownBo
 import DropdownBodyIfPaid from '../common/Dropdown/DropdownBody/DropdownBodyIfPaid/DropdownBodyIfPaid';
 import DropdownPlayerList from '../common/Dropdown/DropdownBody/DropdownPlayerList/DropdownPlayerList';
 import DropdownBodyLeagues from '../common/Dropdown/DropdownBody/DropdownBodyLeagues/DropdownBodyLeagues';
+import DropdownBodyPricePool from '../common/Dropdown/DropdownBody/DropdownBodyPricePool/DropdownBodyPricePool';
 
 const Dropdowns = () => {
     return (
@@ -38,6 +39,9 @@ const Dropdowns = () => {
             </DropdownMenu>
             <DropdownMenu text='Leagues'>
                 <DropdownBodyLeagues />
+            </DropdownMenu>
+            <DropdownMenu text='Prize pool'>
+                <DropdownBodyPricePool />
             </DropdownMenu>
         </>
     );
