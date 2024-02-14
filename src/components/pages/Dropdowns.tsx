@@ -9,6 +9,8 @@ import TextField from '../common/ui/TextField/TextField';
 import TextareaFormContainer from '../common/ui/TextareaFormContainer/TextareaFormContainer';
 import DropdownBodyBasicInfo from '../common/Dropdown/DropdownBody/DropdownBodyBasicInfo/DropdownBodyBasicInfo';
 import DropdownBodyGameInfo from '../common/Dropdown/DropdownBody/DropdownBodyGameInfo/DropdownBodyGameInfo';
+import DropdownBodyRagistration from '../common/Dropdown/DropdownBody/DropdownBodyRagistration/DropdownBodyRagistration';
+import DropdownBodyIfPaid from '../common/Dropdown/DropdownBody/DropdownBodyIfPaid/DropdownBodyIfPaid';
 
 const Dropdowns = () => {
     return (
@@ -23,8 +25,11 @@ const Dropdowns = () => {
                     <DropdownBodyGameInfo />
                 </DropdownBody>
             </DropdownMenu>
-            <DropdownMenu text='Basic info'>
-                <div>hey</div>
+            <DropdownMenu text='REGISTRATION'>
+                <DropdownBodyRagistration />
+            </DropdownMenu>
+            <DropdownMenu text='if Paid'>
+                <DropdownBodyIfPaid />
             </DropdownMenu>
         </>
     );

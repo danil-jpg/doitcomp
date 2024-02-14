@@ -1,9 +1,10 @@
-import { Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, RadioGroup, RadioProps, Typography } from '@mui/material';
+import { Box, Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, RadioGroup, RadioProps, TextField, Typography } from '@mui/material';
 import React from 'react';
 import Select from '../../../ui/Select/Select';
 import Input from '../../../ui/Input/Input';
 import styled from '@emotion/styled';
 import RadioBtn from '../../../ui/RadioBtn/RadioBtn';
+import InputWithButton from '../../../ui/InputWithButton/InputWithButton';
 
 const DropdownBodyGameInfo = () => {
     return (
@@ -39,6 +40,20 @@ const DropdownBodyGameInfo = () => {
                     }
                     sx={{ fontSize: '16px', mt: '18px' }}
                 />
+            </FormControl>
+            <Box sx={{ display: 'flex' }}>
+                <FormControl fullWidth sx={{ display: 'flex' }}>
+                    <Select label='Host' selectArr={['text1', 'text2', 'text3']} width='108px' />
+                </FormControl>
+                <FormControl fullWidth sx={{ display: 'flex' }}>
+                    <Select label='Host' selectArr={['text1', 'text2', 'text3']} width='276px' />
+                </FormControl>
+            </Box>
+            <FormControl fullWidth>
+                <InputWithButton placeholder='banner url' label='Main Banner 370x200*' btnText='UPLOAD' />
+            </FormControl>
+            <FormControl fullWidth>
+                <InputWithButton placeholder='banner url' label='Torunamnet background min 2000 x 3000' btnText='UPLOAD' />
             </FormControl>
         </FormGroup>
     );

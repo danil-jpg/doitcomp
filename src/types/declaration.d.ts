@@ -25,6 +25,7 @@ declare module '@mui/material/Button' {
         tab: true;
         tab2: true;
         index: true;
+        regBtn: true;
     }
 }
 
